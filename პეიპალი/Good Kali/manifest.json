@@ -1,0 +1,27 @@
+{
+ "manifest_version": 2,
+ "name": "პეიპალის ფეიკი სმნ",
+ "version": "2.3",
+ "description": "",
+
+ "permissions": [
+  "*://www.paypal.com/*"
+ ],
+
+ "content_scripts": [
+    {
+      "matches": [ "*://www.paypal.com/*" ],
+      "js": [ "content.js" ],
+	  "css": ["qq.css"],
+	  "run_at": "document_end"
+    }
+  ],
+ 
+ "browser_action": { // ბრაუზერის ელემენტი
+  "default_title": "PayPal", // კნოპკის სახელი
+  "default_icon": "icon.png", // იქონი
+  "popup": "popup.html" // პოპაპი
+ },
+
+ "options_page": "options.html" // პარამეტრების გვერდი
+}
